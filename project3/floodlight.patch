@@ -1,0 +1,22 @@
+diff -ru a/floodlight-plus/src/main/java/net/floodlightcontroller/devicemanager/internal/DeviceManagerImpl.java b/floodlight-plus/src/main/java/net/floodlightcontroller/devicemanager/internal/DeviceManagerImpl.java
+--- a/floodlight-plus/src/main/java/net/floodlightcontroller/devicemanager/internal/DeviceManagerImpl.java	2014-11-03 19:46:13.943426373 -0600
++++ b/floodlight-plus/src/main/java/net/floodlightcontroller/devicemanager/internal/DeviceManagerImpl.java	2014-10-31 16:30:53.141929420 -0500
+@@ -1354,7 +1354,7 @@
+         byte[] senderHardwareAddr = arp.getSenderHardwareAddress();
+         long senderAddr = Ethernet.toLong(senderHardwareAddr);
+ 
+-        if (dlAddr == senderAddr) return;
++        //if (dlAddr == senderAddr) return;
+ 
+         // Ignore broadcast/multicast source
+         if ((senderHardwareAddr[0] & 0x1) != 0)
+diff -ru a/floodlight-plus/src/main/resources/META-INF/services/net.floodlightcontroller.core.module.IFloodlightModule b/floodlight-plus/src/main/resources/META-INF/services/net.floodlightcontroller.core.module.IFloodlightModule
+--- a/floodlight-plus/src/main/resources/META-INF/services/net.floodlightcontroller.core.module.IFloodlightModule	2014-11-03 19:46:13.987426374 -0600
++++ b/floodlight-plus/src/main/resources/META-INF/services/net.floodlightcontroller.core.module.IFloodlightModule	2014-11-01 21:20:36.710672809 -0500
+@@ -26,3 +26,6 @@
+ org.sdnplatform.sync.internal.SyncManager
+ org.sdnplatform.sync.internal.SyncTorture
+ net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier
++edu.wisc.cs.sdn.apps.l3routing.L3Routing
++edu.wisc.cs.sdn.apps.loadbalancer.LoadBalancer
++edu.wisc.cs.sdn.apps.util.ArpServer

@@ -1,0 +1,13 @@
+floodlight.modules=\
+net.floodlightcontroller.counter.CounterStore,\
+net.floodlightcontroller.storage.memory.MemoryStorageSource,\
+net.floodlightcontroller.core.internal.FloodlightProvider,\
+net.floodlightcontroller.threadpool.ThreadPool,\
+net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl,\
+net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier,\
+net.floodlightcontroller.linkdiscovery.internal.LinkDiscoveryManager,\
+net.floodlightcontroller.topology.TopologyManager,\
+net.floodlightcontroller.perfmon.PktInProcessingTime,\
+edu.brown.cs.sdn.apps.util.ArpServer,\
+edu.brown.cs.sdn.apps.sps.ShortestPathSwitching
+edu.brown.cs.sdn.apps.sps.ShortestPathSwitching.table = 0
